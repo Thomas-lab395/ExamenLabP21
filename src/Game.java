@@ -87,7 +87,7 @@ public class Game extends RentItem implements MenuActions {
             case 2:
                 String esp = JOptionPane.showInputDialog("Ingrese nueva especificación:");
                 addEspecificacion(esp);
-                JOptionPane.showMessageDialog(null, "Especificación agregada.");
+                JOptionPane.showMessageDialog(null, "Especificación agregadaa.");
                 break;
 
             case 3:
