@@ -11,26 +11,23 @@ import javax.swing.ImageIcon;
  * @author Mayra Bardales
  */
 
-public abstract class RentItem {
-    // Atributos
-    private String codigo;         // Código único del ítem
-    private String nombre;         // Nombre del ítem
-    private double precioBase;     // Precio base de renta
-    private int cantidadCopias;    // Cantidad de copias disponibles (inicia en 0)
-    private ImageIcon imagen;      // Imagen del ítem (desde archivo en GUI)
 
-    // Constructor que inicializa los 3 primeros atributos; copias en 0
+public abstract class RentItem {
+    private String codigo;         
+    private String nombre;         
+    private double precioBase;     
+    private int cantidadCopias;    
+    private ImageIcon imagen;      
+
     public RentItem(String codigo, String nombre, double precioBase) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.precioBase = precioBase;
-        this.cantidadCopias = 0;  // siempre inicia en 0
+        this.cantidadCopias = 0;  
     }
 
-    // Método abstracto (debe implementarse en subclases)
     public abstract double pagoRenta(int dias);
 
-    // Getters para los 3 atributos iniciales
     public String getCodigo() {
         return codigo;
     }
@@ -43,7 +40,6 @@ public abstract class RentItem {
         return precioBase;
     }
 
-    // Getter y Setter para copias
     public int getCantidadCopias() {
         return cantidadCopias;
     }
@@ -52,7 +48,6 @@ public abstract class RentItem {
         this.cantidadCopias = cantidadCopias;
     }
 
-    // Getter y Setter para imagen
     public ImageIcon getImagen() {
         return imagen;
     }
@@ -61,7 +56,6 @@ public abstract class RentItem {
         this.imagen = imagen;
     }
 
-    // Método toString() redefinido
     @Override
     public String toString() {
         return "Código: " + codigo + 

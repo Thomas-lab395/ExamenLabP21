@@ -8,6 +8,8 @@ package labexamenp2l;
  *
  * @author Mayra Bardales
  */
-public class MenuActions {
-    
+
+public interface MenuActions {
+    void submenu();
+    void ejecutarOpcion(int opcion);
 }
